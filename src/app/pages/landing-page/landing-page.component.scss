@@ -1,0 +1,78 @@
+/* Ajoutez ces styles dans votre fichier CSS */
+
+/* Styles pour mat-card */
+.shadow-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rounded-lg {
+    border-radius: 0.375rem;
+  }
+  
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .w-350 {
+    width: 350px;
+  }
+  
+  /* Styles pour mat-card-header */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Styles pour mat-card-subtitle */
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .hover-underline:hover {
+    text-decoration: underline;
+    color: red;
+  }
+  
+  /* Styles pour img */
+  .rounded-tl-lg {
+    border-top-left-radius: 0.375rem;
+  }
+  
+  .rounded-tr-lg {
+    border-top-right-radius: 0.375rem;
+  }
+  
+  .h-40 {
+    height: 40px;
+  }
+  
+  .w-40 {
+    width: 40px;
+  }
+  
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .p-5 {
+    padding: 1.25rem;
+  }
+  
+  .text-blue-600 {
+    color: #0077cc;
+  }
+  
+  /* Ajoutez le reste de vos styles ici */
+  
+  /* Ajoutez également les styles pour les classes personnalisées que vous utilisez */
+  
+  /* Exemple */
+  .bg-gradient-to-r {
+    background: linear-gradient(to right, #e44d26, #f16529);
+  }
+  
