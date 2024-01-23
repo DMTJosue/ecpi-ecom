@@ -13,6 +13,6 @@ export const routes: Routes = [
   { path: 'products', component: ProductsPageComponent },
   { path: 'category/:id', component: CategoriesComponent },
   {path: 'carts', component :  CartsPageComponent},
-  { path: '', redirectTo: 'products', pathMatch:  'full' },
+  { path: '', redirectTo: 'home', pathMatch:  'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
