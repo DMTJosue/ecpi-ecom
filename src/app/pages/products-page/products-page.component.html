@@ -1,7 +1,27 @@
-<div class="product">
-  @for(product of products; track $index) {
-    <app-product-item [product]="product"></app-product-item>
-  }
+
+
+<div class="md:flex md:flex-row ">
+  <div class="md:w-2/5 flex flex-col justify-center items-center">
+    <h2 class="font-serif text-5xl text-gray-600 mb-4 text-center md:self-start md:text-left">Chaque produit raconte une histoire, <br>chaque achat crée une expérience inoubliable.</h2>
+    
+    <a href="#" class="bg-gradient-to-r from-red-600 to-slate-500 rounded-full py-4 px-8 text-gray-50 uppercase text-xl md:self-start my-5">Acheter maintenant</a>
+  </div>
+  <div class="md:w-1/2">
+    <img src="../../../assets/images/dropshipping-model-animate.svg"  alt = "shop svg" class="w-full" />
+  </div>
+</div><!-- Hero sectioin -->
+<div class="my-10">
+  <div class="flex flex-row justify-center my-5">
+    <h2 class="text-3xl">~~Nos produits~~</h2>
+  </div>
+  <div class="grid grid-flow-row grid-cols-1 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+    
+    @for(product of products; track $index) {
+      <app-product-item [product]="product"></app-product-item>
+    }
+    
+      
+    
+  </div> <!-- Section de la collection Hommes -->
 </div>
-
-
+    

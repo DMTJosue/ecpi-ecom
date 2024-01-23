@@ -1,46 +1,51 @@
-<div class="p-5 h-screen">
+
+<div class="md:flex md:flex-row mt">
+  <div class="md:w-2/5 flex flex-col justify-center items-center">
+    <h2 class="font-serif text-5xl text-gray-600 mb-4 text-center md:self-start md:text-left"> Votre espace là où chaque,<br> interaction devient unique</h2>
     
-  <div class="overflow-auto rounded-lg shadow hidden md:block">
-    <table class="w-full text-center text-sm font-light table-auto">
-      <thead class="border-b font-medium dark:border-neutral-500">
-        <tr>
-          <th scope="col" class="px-0 py-0">#</th>
-          <th scope="col" class="px2 py0">Username</th>
-          <th scope="col" class="px0 py0">Prénom</th>
-          <th scope="col" class="px0 py0">Nom</th>
-          <th scope="col" class="px0 py0">Phone</th>
-          <th scope="col" class="px0 py0">Email</th>
-          <th scope="col" class="px0 py0">Street</th>
-          <th scope="col" class="px0 py0">Number</th>
-          <th scope="col" class="px0 py0">City</th>
-          <th scope="col" class="px0 py0">Zipcode</th>
-          <th scope="col" class="px0 py0">Longitude</th>
-          <th scope="col" class="px0 py0">Latitude</th>
-        </tr>
-      </thead>
-      <tbody>
-        @for (user of users; track $index) {
-          <tr class="border-b dark:border-neutral-500">
-            
-              <td class="whitespace-nowrap px0 py0 font-medium"> {{user.id}} </td>
-              <td class="whitespace-nowrap px-2 py-3">{{ user.username }}</td>
-              <td class="whitespace-nowrap px2 py0">{{ user.name.firstname }}</td>
-              <td class="whitespace-nowrap px2 py0">{{ user.name.lastname }}</td>
-              <td class="whitespace-nowrap px0 py0">{{ user.phone }}</td>
-              <td class="whitespace-nowrap px0 py0">{{ user.email }}</td>
-              <td class="whitespace-nowrap px0 py0">{{ user.address.street }}</td>
-              <td class="whitespace-nowrap px0 py0">{{ user.address.number }}</td>
-              <td class="whitespace-nowrap px0 py0">{{ user.address.city }}</td>
-              <td class="whitespace-nowrap px0 py0">{{ user.address.zipcode }}</td>
-              <td class="whitespace-nowrap px0 py0">{{ user.address.geolocation.long }}</td>
-              <td class="whitespace-nowrap px0 py0">{{ user.address.geolocation.lat }}</td>
-            
-            
-            
-          </tr>
-        }
-        
-      </tbody>
-    </table>
+    <a href="#products" class="bg-gradient-to-r from-red-600 to-slate-500 rounded-full py-4 px-8 text-gray-50 uppercase text-xl md:self-start my-5">Tous les utilisateurs</a>
   </div>
+  <div class="md:w-1/2">
+    <img src="../../../assets/images/user-research-animate.svg"  alt = "shop svg" class="w-full" />
+  </div>
+</div><!-- Hero sectioin -->
+<div class="my-10">
+  <div class="grid grid-flow-row grid-cols-1 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+    <div class="p-5 h-screen">
+      <div class="overflow-auto rounded-lg shadow md:block">
+        <table class="w-full text-center text-sm font-light table-auto">
+          <thead class="border-b font-medium dark:border-neutral-500">
+            <tr>
+              <th scope="col" class="px-0 py-0">#</th>
+              <th scope="col" class="px0 py0">Prénom</th>
+              <th scope="col" class="px0 py0">Nom</th>
+              <th scope="col" class="px0 py0">Email</th>
+              <th scope="col" class="px0 py0">Phone</th>
+              <th scope="col" class="px0 py0">Adresse</th>
+              <th scope="col" class="px0 py0">Zipcode</th>
+              <th scope="col" class="px0 py0">Longitude</th>
+              <th scope="col" class="px0 py0">Latitude</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (user of users; track $index) {
+              <tr class="border-b dark:border-neutral-500">
+                <td class="whitespace-nowrap px0 py0 font-medium">{{user.id}}</td>
+                <td class="whitespace-nowrap px2 py0">{{user.name.firstname}}</td>
+                <td class="whitespace-nowrap px2 py0">{{user.name.lastname}}</td>
+                <td class="whitespace-nowrap px0 py0">{{user.email}}</td>
+                <td class="whitespace-nowrap px0 py0">{{user.phone}}</td>
+                <td class="whitespace-nowrap px0 py0">{{user.address.number}}, {{user.address.street}}, {{user.address.city}}</td>
+                <td class="whitespace-nowrap px0 py0">{{user.address.zipcode}}</td>
+                <td class="whitespace-nowrap px0 py0">{{user.address.geolocation.long}}</td>
+                <td class="whitespace-nowrap px0 py0">{{user.address.geolocation.lat}}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+  </div> <!-- Section de la collection Hommes -->
 </div>
+    

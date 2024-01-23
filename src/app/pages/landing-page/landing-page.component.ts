@@ -1,5 +1,6 @@
-import {Component, Input} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Product} from "../../core/models/product";
+import { ProductService } from '../../core/services/product.service';
 import {ActivatedRoute, Route, Router} from "@angular/router";
 @Component({
   selector: 'app-landing-page',
@@ -8,13 +9,19 @@ import {ActivatedRoute, Route, Router} from "@angular/router";
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent  {
+export class LandingPageComponent implements OnInit  {
 
-  @Input({required: true}) product: Product = {} as Product;
+ 
+  products: Product[] = [];
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private productService: ProductService) {}
 
-  routeToCategory(category: string) {
-    this.router.navigate(['category', category])
+  ngOnInit() {
+    this.productService.getLimitedProducts(4).subscribe({
+      next: value => this.products = value,
+      error: err => alert('une erreur est survenue!')
+    })
   }
+
+  
 }

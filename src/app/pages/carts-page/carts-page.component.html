@@ -1,5 +1,55 @@
-<div>
-    @for(cart of carts; track $index) {
-      <app-cart-item [cart]="cart"></app-cart-item>
-    }
+
+
+<div class="md:flex md:flex-row ">
+  <div class="md:w-2/5 flex flex-col justify-center items-center">
+    <h2 class="font-serif text-5xl text-gray-600 mb-4 text-center md:self-start md:text-left">Du clic au bonheur : parcourez votre panier .</h2>
+    
+    <a href="#" class="bg-gradient-to-r from-red-600 to-slate-500 rounded-full py-4 px-8 text-gray-50 uppercase text-xl md:self-start my-5">Acheter maintenant</a>
+  </div>
+  <div class="md:w-1/2">
+    <img src="../../../assets/images/add-to-cart-animate.svg"  alt = "shop svg" class="w-full" />
+  </div>
+</div><!-- Hero sectioin -->
+<div class="my-10">
+  <div class="flex flex-row justify-center my-5">
+    <h2 class="text-3xl">~~Paniers~~</h2>
+  </div>
+  <div class="grid grid-flow-row grid-cols-1 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+    
+    <div class="flex flex-col">
+      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+          <div class="overflow-hidden">
+            @for(cart of carts; track $index) {
+              <app-cart-item [cart]="cart"></app-cart-item>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+  </div> <!-- Section de la collection Hommes -->
 </div>
+    
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+

@@ -1,34 +1,24 @@
-<!-- cart.component.html -->
-<div class="flex flex-col">
-    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-      <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-        <div class="overflow-hidden">
-          <table class="min-w-full text-center text-sm font-light">
-            <thead class="border-b font-medium dark:border-neutral-500">
-              <tr>
-                <th scope="col" class="px-6 py-4">#</th>
-                <th scope="col" class="px-6 py-4">User ID</th>
-                <th scope="col" class="px-6 py-4">Date</th>
-                <th scope="col" class="px-6 py-4">Products</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr  class="border-b dark:border-neutral-500">
-                <td class="whitespace-nowrap px-6 py-4 font-medium">{{ cart.id }}</td>
-                <td class="whitespace-nowrap px-6 py-4"  >{{ cart.userId }}</td>
-                <td class="whitespace-nowrap px-6 py-4">{{ cart.date | date }}</td>
-                <td class="whitespace-nowrap px-6 py-4">
-                  <ul>
-                    <li *ngFor="let product of cart.products">
-                      Product ID: {{ product.productId }}, Quantity: {{ product.quantity }}
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+<table class="min-w-full text-center text-sm font-light">
+  <thead class="border-b font-medium dark:border-neutral-500">
+    <tr>
+      <th scope="col" class="px-6 py-4">#</th>
+      <th scope="col" class="px-6 py-4">User ID</th>
+      <th scope="col" class="px-6 py-4">Date</th>
+      <th scope="col" class="px-6 py-4">Products</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  class="border-b dark:border-neutral-500">
+      <td class="whitespace-nowrap px-6 py-4 font-medium">{{ cart.id }}</td>
+      <td class="whitespace-nowrap px-6 py-4"  >{{ cart.userId }}</td>
+      <td class="whitespace-nowrap px-6 py-4">{{ cart.date | date }}</td>
+      <td class="whitespace-nowrap px-6 py-4">
+        <ul>
+          <li *ngFor="let product of cart.products">
+            Product ID: {{ product.productId }}, Quantity: {{ product.quantity }}
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
