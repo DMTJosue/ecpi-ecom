@@ -12,7 +12,7 @@ export const routes: Routes = [
   { path: 'users', component: UsersPageComponent },
   { path: 'products', component: ProductsPageComponent },
   { path: 'category/:id', component: CategoriesComponent },
-  {path: 'carts', component :  CartsPageComponent},
+  { path: 'carts', component :  CartsPageComponent},
   { path: '', redirectTo: 'home', pathMatch:  'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
